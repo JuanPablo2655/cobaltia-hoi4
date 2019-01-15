@@ -1,0 +1,23 @@
+add_namespace = cobaltia
+
+country_event = {
+	id = cobaltia.1
+	title = cobaltia.1.t
+	desc = cobaltia.1.d
+	picture = GFX_news_event_chinese_soldiers_march
+	
+	is_triggered_only = yes
+
+    trigger = {
+        tag = CTA
+        AND = {
+            date > 1936.1.15
+        }
+    } 
+	
+	option = {
+		name = annex
+		ai_chance = { factor = 100 }
+		annex_country = { target = USA transfer_troops = yes }
+	}
+}
